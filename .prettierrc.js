@@ -1,0 +1,20 @@
+module.exports = {
+  semi: true,
+  trailingComma: "es5",
+  singleQuote: true,
+  printWidth: 80,
+  tabWidth: 2,
+  importOrder: [
+    "^react$",
+    "^next",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
+    "^[./]",
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  plugins: [
+    "prettier-plugin-tailwindcss",
+    "@trivago/prettier-plugin-sort-imports",
+  ],
+};
