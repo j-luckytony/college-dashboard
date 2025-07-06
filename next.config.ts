@@ -1,7 +1,9 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["https://college-dashboard-theta.vercel.app/"],
+  },
 };
 
 export default nextConfig;
