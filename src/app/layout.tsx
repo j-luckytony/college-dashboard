@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
 
-import '@fontsource/metropolis'; // Defaults to weight 400
-import '@fontsource/metropolis/500.css'; // Medium weight
-import '@fontsource/metropolis/600.css'; // SemiBold weight
-import '@fontsource/metropolis/700.css'; // Bold weight
+import '@fontsource/metropolis';
+// Defaults to weight 400
+import '@fontsource/metropolis/500.css';
+// Medium weight
+import '@fontsource/metropolis/600.css';
+// SemiBold weight
+import '@fontsource/metropolis/700.css';
+import { Analytics } from '@vercel/analytics/react';
 
+// Bold weight
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -21,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-metropolis antialiased">{children}</body>
+      <body className="font-metropolis antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
